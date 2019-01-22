@@ -1,4 +1,4 @@
-source("./hello-world.R")
+source('exercism/r/hello-world/hello-world.R')
 library(testthat)
 
 context("hello world")
