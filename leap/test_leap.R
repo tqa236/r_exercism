@@ -1,4 +1,4 @@
-source('exercism/r/leap.R")
+source('exercism/r/leap/leap.R')
 library(testthat)
 
 context("leap")
