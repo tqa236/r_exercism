@@ -1,4 +1,4 @@
-source("./rna-transcription.R")
+source("~/exercism/r/rna-transcription/rna-transcription.R")
 library(testthat)
 
 context("rna transcription")

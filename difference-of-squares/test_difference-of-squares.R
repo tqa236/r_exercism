@@ -1,4 +1,4 @@
-source("./difference-of-squares.R")
+source("~/exercism/r/difference-of-squares/difference-of-squares.R")
 library(testthat)
 
 context("difference of squares")

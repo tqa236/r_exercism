@@ -1,4 +1,4 @@
-source("./acronym.R")
+source("~/exercism/r/acronym/acronym.R")
 library(testthat)
 
 context("acronym")
