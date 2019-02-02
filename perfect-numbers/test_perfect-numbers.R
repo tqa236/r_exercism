@@ -1,4 +1,4 @@
-source("./perfect-numbers.R")
+source("~/exercism/r/perfect-numbers/perfect-numbers.R")
 library(testthat)
 
 context("perfect numbers")

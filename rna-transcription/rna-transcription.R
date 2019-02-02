@@ -1,8 +1,10 @@
-library(stringr)
+replace <- function(strand,rna_map){
+  if (!(strand %in% c("C","G","A","T"))) throws("Invalid ADN")
+  rna_map[strand]
+}
 
 to_rna <- function(dna) {
-  rna <- str_replace_all(dna, c("C", "G"),c("G", "C"))
-  rna
-  str_replace_all(dna, c("C", "G"),c("G", "C"))[1]
+  rna_map <- list("C"="G","G"="C","T"="A","A"="U")
+  dnal <- unlist(strsplit(dna, "")[[1]])
+  paste(sapply(dnal, replace, rna_map = rna_map), collapse='')
 }
-to_rna("C")

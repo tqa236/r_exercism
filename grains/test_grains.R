@@ -1,4 +1,4 @@
-source("./grains.R")
+source("~/exercism/r/grains/grains.R")
 library(testthat)
 
 context("grains")

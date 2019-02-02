@@ -1,4 +1,4 @@
-source("./space-age.R")
+source("~/exercism/r/space-age/space-age.R")
 library(testthat)
 
 context("space age")
