@@ -1,4 +1,4 @@
-source("./secret-handshake.R")
+source("~/exercism/r/secret-handshake/secret-handshake.R")
 library(testthat)
 
 context("secret handshake")
