@@ -1,3 +1,3 @@
-# r_exercism
+# R Exercism
 
-R track on Exercism
+Solutions for R track on Exercism
