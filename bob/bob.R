@@ -1,3 +1,5 @@
+library(stringr)
+
 bob <- function(input) {
   if (grepl("^\\s*$", input)) "Fine. Be that way!"
   else if (str_sub(trimws(input, "r"), start = -1) == "?"){
