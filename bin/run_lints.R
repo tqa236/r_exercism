@@ -9,7 +9,7 @@ linters <- list(
   f = infix_spaces_linter
 )
 
-files <- list.files(path = "exercises", pattern = ".+\\.R$", recursive = TRUE, full.names = TRUE)
+files <- list.files(path = ".", pattern = ".+\\.R$", recursive = TRUE, full.names = TRUE)
 lints <- lintr:::flatten_lints(lapply(files, function(file) {
   if (interactive()) {
     message(".", appendLF = FALSE)
