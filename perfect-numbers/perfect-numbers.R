@@ -2,7 +2,7 @@ number_type <- function(n){
   square_root <- round(sqrt(n))
   numbers <- 1:square_root
 
-  small_divisors <- numbers[n%%numbers == 0]
+  small_divisors <- numbers[n %% numbers == 0]
   big_divisors <- n / small_divisors
 
   aliquot <- sum(small_divisors) + sum(big_divisors)

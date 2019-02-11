@@ -10,5 +10,4 @@ install:
 - R -e "install.packages('lintr')"
 - R -e "install.packages('magrittr')"
 script:
-- R -e "source('bin/run_tests.R')"
 - R -e "source('bin/run_lints.R')"

@@ -1,11 +1,11 @@
 library(lintr)
 
 linters <- list(
-  a = line_length_linter(80),
+  # a = line_length_linter(80),
   b = camel_case_linter,
   c = assignment_linter,
   d = commas_linter,
-  e = absolute_paths_linter,
+  # e = absolute_paths_linter,
   f = infix_spaces_linter
 )
 
