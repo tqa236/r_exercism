@@ -1,7 +1,8 @@
-library(stringr)
-
 word_count <- function(input) {
-  as.list(strsplit(input, "\\s+")[[1]])
-  str_count(strsplit(input, "\\s+")[[1]])
+  input <- trimws(gsub("[^[:alnum:]]", " ", tolower(input)))
+  words <- strsplit(input, "\\s+")[[1]]
+  frequency_table <- table(words)
+  occurences <- as.list(frequency_table)
+  names(occurences) <- names(frequency_table)
+  occurences
 }
-word_count("one of each")
