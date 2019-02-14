@@ -1,4 +1,4 @@
-source("./sieve.R")
+source("~/exercism/r/sieve/sieve.R")
 library(testthat)
 
 context("sieve")

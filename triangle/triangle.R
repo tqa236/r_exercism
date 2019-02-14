@@ -9,7 +9,7 @@ triangle <- function(x, y, z) {
     stop("Not a triangle!")
   }
   point <- (x == y) + (y == z) + (z == x)
-  if (point == 3) structure(NULL,class=types[[1]])
-  else if (point == 1) structure(NULL,class=types[[2]])
-  else structure(NULL,class=types[[3]])
+  if (point == 3) structure(NULL, class = types[[1]])
+  else if (point == 1) structure(NULL, class = types[[2]])
+  else structure(NULL, class = types[[3]])
 }

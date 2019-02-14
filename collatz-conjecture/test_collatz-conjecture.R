@@ -1,4 +1,4 @@
-source("./collatz-conjecture.R")
+source("~/exercism/r/collatz-conjecture/collatz-conjecture.R")
 library(testthat)
 
 context("collatz conjecture")
