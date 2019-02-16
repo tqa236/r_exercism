@@ -1,4 +1,4 @@
-source("./scrabble-score.R")
+source("~/exercism/r/scrabble-score/scrabble-score.R")
 library(testthat)
 
 context("scrabble score")
