@@ -1,4 +1,4 @@
-source("~/exercism/r/tournament/tournament.R")
+source("./tournament.R")
 library(testthat)
 
 context("tournament")
