@@ -1,4 +1,4 @@
-source("./crypto-square.R")
+source("~/exercism/r/crypto-square/crypto-square.R")
 library(testthat)
 
 context("crypto square")
