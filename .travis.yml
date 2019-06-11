@@ -4,8 +4,6 @@ r:
   - oldrel
   - release
   - devel
-r_github_packages:
-  - r-lib/covr
 install:
 - R -e "install.packages('testthat')"
 - R -e "install.packages('jsonlite')"
@@ -13,5 +11,3 @@ install:
 - R -e "install.packages('magrittr')"
 script:
 - R -e "source('bin/run_lints.R')"
-after_success:
-- Rscript -e 'covr::coveralls()'
