@@ -33,7 +33,7 @@ run_tests <- function() {
   
   # read config and test all exercises
   config <- jsonlite::fromJSON(file.path("..", "config.json"))
-  print(config)
+  print(config$exercises$slug)
   lapply(config$exercises$slug, test_exercise)
     
 }
