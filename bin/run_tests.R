@@ -20,16 +20,16 @@ test_exercise <- function(exercise) {
 
 run_tests <- function() {
 
-  # create temp directory for testing purposes
-  temp_dir <- "temp" 
-  dir.create(temp_dir)
-  setwd(temp_dir)
+#   # create temp directory for testing purposes
+#   temp_dir <- "temp" 
+#   dir.create(temp_dir)
+#   setwd(temp_dir)
   
-  on.exit({
-    # clean up on exit
-    setwd(dir = "../")
-    unlink("temp", recursive = TRUE)
-  })
+#   on.exit({
+#     # clean up on exit
+#     setwd(dir = "../")
+#     unlink("temp", recursive = TRUE)
+#   })
   
   # read config and test all exercises
   config <- jsonlite::fromJSON(file.path("..", "config.json"))
