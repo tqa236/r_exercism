@@ -14,6 +14,7 @@ install:
 - R -e "install.packages('magrittr')"
 script:
 - R -e "source('bin/run_lints.R')"
+- R -e "source('bin/run_tests.R')"
 
 after_success:
   - Rscript -e 'covr::coveralls()'
