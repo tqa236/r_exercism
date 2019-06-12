@@ -5,11 +5,11 @@ test_exercise <- function(exercise) {
   test_file <- paste0("test_", exercise, ".R")
   
   file.copy(
-    file.path("..", "exercises", exercise, "example.R"), 
+    file.path("..", exercise, "example.R"), 
     solution_file
   )
   file.copy(
-    file.path("..", "exercises", exercise, test_file), 
+    file.path("..", exercise, test_file), 
     test_file
   )
   
