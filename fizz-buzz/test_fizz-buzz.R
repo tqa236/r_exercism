@@ -1,4 +1,4 @@
-source("./fizz-buzz.R")
+source("C:/Users/trinh/Exercism/r/fizz-buzz/fizz-buzz.R")
 library(testthat)
 
 ans10 <- c("1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz")
