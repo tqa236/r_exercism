@@ -1,8 +1,10 @@
 word_count <- function(input) {
-  input <- trimws(gsub("[^[:alnum:]]", " ", tolower(input)))
-  words <- strsplit(input, "\\s+")[[1]]
+  input <- tolower(input)
+  input <- gsub("'([^[:alnum:]]|$)", " ", input)
+  input <- gsub("([^[:alnum:]]|^)'", " ", input)
+  input <- gsub("[^[:alnum:]'\\s]", " ", input)
+  words <- unlist(strsplit(input, "\\s+"))
+  words <- words[words != ""]
   frequency_table <- table(words)
-  occurences <- as.list(frequency_table)
-  names(occurences) <- names(frequency_table)
-  occurences
+  as.list(frequency_table)
 }

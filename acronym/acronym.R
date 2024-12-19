@@ -1,4 +1,5 @@
 acronym <- function(input) {
-    words <- strsplit(toupper(input), "[^[:alnum:]]")
-    paste(unlist(lapply(words, substring, 1, 1)), collapse="")
+  words <- unlist(strsplit(toupper(input), "[^[:alpha:]']+"))
+  words <- words[words != ""]
+  paste(substr(words, 1, 1), collapse = "")
 }
