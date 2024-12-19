@@ -1,7 +1,5 @@
-source("~/exercism/r/perfect-numbers/perfect-numbers.R")
+source("./perfect-numbers.R")
 library(testthat)
-
-context("perfect numbers")
 
 test_that("Smallest perfect number is classified correctly", {
   n <- 6
@@ -73,6 +71,3 @@ test_that("Negative integer is rejected (not a natural number)", {
   n <- -1
   expect_error(number_type(n))
 })
-
-
-message("All tests passed for exercise: perfect-numbers")

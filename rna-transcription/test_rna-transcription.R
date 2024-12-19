@@ -1,7 +1,5 @@
-source("~/exercism/r/rna-transcription/rna-transcription.R")
+source("./rna-transcription.R")
 library(testthat)
-
-context("rna transcription")
 
 test_that("RNA complement of cytosine is guanine", {
   dna <- "C"
@@ -42,5 +40,3 @@ test_that("DNA correctly handles partially invalid input", {
   dna <- "ACGTXXXCTTAA"
   expect_error(to_rna(dna))
 })
-
-message("All tests passed for exercise: rna-transcription")

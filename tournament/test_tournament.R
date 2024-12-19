@@ -1,4 +1,4 @@
-source("~/exercism/r/tournament/tournament.R")
+source("./tournament.R")
 library(testthat)
 
 context("tournament")
@@ -101,77 +101,77 @@ test_that("an empty line", {
                  P = c(6, 4, 1, 0)
                ))
 })
-#
-# test_that("wrong separator used", {
-#   input <- c(
-#     "Allegoric Alaskans;Blithering Badgers;loss",
-#     "Devastating Donkeys;Allegoric Alaskans;loss",
-#     "Courageous Californians;Blithering Badgers;draw",
-#     "Devastating Donkeys@Courageous Californians;draw",
-#     "Allegoric Alaskans;Courageous Californians;win"
-#   )
-#   expect_equal(tournament(input),
-#                data.frame(
-#                  Team = c(
-#                    "Allegoric Alaskans",
-#                    "Blithering Badgers",
-#                    "Courageous Californians",
-#                    "Devastating Donkeys"
-#                  ),
-#                  MP = c(3, 2, 2, 1),
-#                  W = c(2, 1, 0, 0),
-#                  D = c(0, 1, 1, 0),
-#                  L = c(1, 0, 1, 1),
-#                  P = c(6, 4, 1, 0)
-#                ))
-# })
-#
-# test_that("too many separators", {
-#   input <- c(
-#     "Allegoric Alaskans;Blithering Badgers;loss",
-#     "Devastating Donkeys;Courageous Californians;draw;5",
-#     "Devastating Donkeys;Allegoric Alaskans;loss",
-#     "Courageous Californians;Blithering Badgers;draw",
-#     "Allegoric Alaskans;Courageous Californians;win"
-#   )
-#   expect_equal(tournament(input),
-#                data.frame(
-#                  Team = c(
-#                    "Allegoric Alaskans",
-#                    "Blithering Badgers",
-#                    "Courageous Californians",
-#                    "Devastating Donkeys"
-#                  ),
-#                  MP = c(3, 2, 2, 1),
-#                  W = c(2, 1, 0, 0),
-#                  D = c(0, 1, 1, 0),
-#                  L = c(1, 0, 1, 1),
-#                  P = c(6, 4, 1, 0)
-#                ))
-# })
-#
-# test_that("invalid match result", {
-#   input <- c(
-#     "Allegoric Alaskans;Blithering Badgers;loss",
-#     "Devastating Donkeys;Allegoric Alaskans;loss",
-#     "Courageous Californians;Blithering Badgers;draw",
-#     "Allegoric Alaskans;Courageous Californians;win",
-#     "Devastating Donkeys;Allegoric Alaskans;dra"
-#   )
-#   expect_equal(tournament(input),
-#                data.frame(
-#                  Team = c(
-#                    "Allegoric Alaskans",
-#                    "Blithering Badgers",
-#                    "Courageous Californians",
-#                    "Devastating Donkeys"
-#                  ),
-#                  MP = c(3, 2, 2, 1),
-#                  W = c(2, 1, 0, 0),
-#                  D = c(0, 1, 1, 0),
-#                  L = c(1, 0, 1, 1),
-#                  P = c(6, 4, 1, 0)
-#                ))
-# })
+
+test_that("wrong separator used", {
+  input <- c(
+    "Allegoric Alaskans;Blithering Badgers;loss",
+    "Devastating Donkeys;Allegoric Alaskans;loss",
+    "Courageous Californians;Blithering Badgers;draw",
+    "Devastating Donkeys@Courageous Californians;draw",
+    "Allegoric Alaskans;Courageous Californians;win"
+  )
+  expect_equal(tournament(input),
+               data.frame(
+                 Team = c(
+                   "Allegoric Alaskans",
+                   "Blithering Badgers",
+                   "Courageous Californians",
+                   "Devastating Donkeys"
+                 ),
+                 MP = c(3, 2, 2, 1),
+                 W = c(2, 1, 0, 0),
+                 D = c(0, 1, 1, 0),
+                 L = c(1, 0, 1, 1),
+                 P = c(6, 4, 1, 0)
+               ))
+})
+
+test_that("too many separators", {
+  input <- c(
+    "Allegoric Alaskans;Blithering Badgers;loss",
+    "Devastating Donkeys;Courageous Californians;draw;5",
+    "Devastating Donkeys;Allegoric Alaskans;loss",
+    "Courageous Californians;Blithering Badgers;draw",
+    "Allegoric Alaskans;Courageous Californians;win"
+  )
+  expect_equal(tournament(input),
+               data.frame(
+                 Team = c(
+                   "Allegoric Alaskans",
+                   "Blithering Badgers",
+                   "Courageous Californians",
+                   "Devastating Donkeys"
+                 ),
+                 MP = c(3, 2, 2, 1),
+                 W = c(2, 1, 0, 0),
+                 D = c(0, 1, 1, 0),
+                 L = c(1, 0, 1, 1),
+                 P = c(6, 4, 1, 0)
+               ))
+})
+
+test_that("invalid match result", {
+  input <- c(
+    "Allegoric Alaskans;Blithering Badgers;loss",
+    "Devastating Donkeys;Allegoric Alaskans;loss",
+    "Courageous Californians;Blithering Badgers;draw",
+    "Allegoric Alaskans;Courageous Californians;win",
+    "Devastating Donkeys;Allegoric Alaskans;dra"
+  )
+  expect_equal(tournament(input),
+               data.frame(
+                 Team = c(
+                   "Allegoric Alaskans",
+                   "Blithering Badgers",
+                   "Courageous Californians",
+                   "Devastating Donkeys"
+                 ),
+                 MP = c(3, 2, 2, 1),
+                 W = c(2, 1, 0, 0),
+                 D = c(0, 1, 1, 0),
+                 L = c(1, 0, 1, 1),
+                 P = c(6, 4, 1, 0)
+               ))
+})
 
 message("All tests passed for exercise: tournament")

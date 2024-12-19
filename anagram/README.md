@@ -1,23 +1,50 @@
 # Anagram
 
-Given a word and a list of possible anagrams, select the correct sublist.
+Welcome to Anagram on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-Given `"listen"` and a list of candidates like `"enlists" "google"
-"inlets" "banana"` the program should return a list containing
-`"inlets"`.
+## Introduction
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
+At a garage sale, you find a lovely vintage typewriter at a bargain price!
+Excitedly, you rush home, insert a sheet of paper, and start typing away.
+However, your excitement wanes when you examine the output: all words are garbled!
+For example, it prints "stop" instead of "post" and "least" instead of "stale."
+Carefully, you try again, but now it prints "spot" and "slate."
+After some experimentation, you find there is a random delay before each letter is printed, which messes up the order.
+You now understand why they sold it for so little money!
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
+You realize this quirk allows you to generate anagrams, which are words formed by rearranging the letters of another word.
+Pleased with your finding, you spend the rest of the day generating hundreds of anagrams.
 
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+## Instructions
+
+Your task is to, given a target word and a set of candidate words, to find the subset of the candidates that are anagrams of the target.
+
+An anagram is a rearrangement of letters to form a new word: for example `"owns"` is an anagram of `"snow"`.
+A word is _not_ its own anagram: for example, `"stop"` is not an anagram of `"stop"`.
+
+The target and candidates are words of one or more ASCII alphabetic characters (`A`-`Z` and `a`-`z`).
+Lowercase and uppercase characters are equivalent: for example, `"PoTS"` is an anagram of `"sTOp"`, but `StoP` is not an anagram of `sTOp`.
+The anagram set is the subset of the candidate set that are anagrams of the target (in any order).
+Words in the anagram set should have the same letter case as in the candidate set.
+
+Given the target `"stone"` and candidates `"stone"`, `"tones"`, `"banana"`, `"tons"`, `"notes"`, `"Seton"`, the anagram set is `"tones"`, `"notes"`, `"Seton"`.
+
+The instructions above refer to "lists" in the general sense and not to the `list()` data type in R. Note that the tests for this exercise in R expect a character vector i.e. `c()` to be returned and not a `list()`.
 
 ## Source
 
-Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonboiser
+
+### Contributed to by
+
+- @cmiller01
+- @jonmcalder
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+Inspired by the Extreme Startup game - https://github.com/rchatley/extreme_startup

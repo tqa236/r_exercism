@@ -1,44 +1,73 @@
 # Sieve
 
-Use the Sieve of Eratosthenes to find all the primes from 2 up to a given
-number.
+Welcome to Sieve on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-The Sieve of Eratosthenes is a simple, ancient algorithm for finding all
-prime numbers up to any given limit. It does so by iteratively marking as
-composite (i.e. not prime) the multiples of each prime,
-starting with the multiples of 2.
+## Introduction
 
-Create your range, starting at two and continuing up to and including the given limit. (i.e. [2, limit])
+You bought a big box of random computer parts at a garage sale.
+You've started putting the parts together to build custom computers.
 
-The algorithm consists of repeating the following over and over:
+You want to test the performance of different combinations of parts, and decide to create your own benchmarking program to see how your computers compare.
+You choose the famous "Sieve of Eratosthenes" algorithm, an ancient algorithm, but one that should push your computers to the limits.
 
-- take the next available unmarked number in your list (it is prime)
-- mark all the multiples of that number (they are not prime)
+## Instructions
 
-Repeat until you have processed each number in your range.
+Your task is to create a program that implements the Sieve of Eratosthenes algorithm to find all prime numbers less than or equal to a given number.
 
-When the algorithm terminates, all the numbers in the list that have not
-been marked are prime.
+A prime number is a number larger than 1 that is only divisible by 1 and itself.
+For example, 2, 3, 5, 7, 11, and 13 are prime numbers.
+By contrast, 6 is _not_ a prime number as it not only divisible by 1 and itself, but also by 2 and 3.
 
-The wikipedia article has a useful graphic that explains the algorithm:
-https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
+To use the Sieve of Eratosthenes, you first create a list of all the numbers between 2 and your given number.
+Then you repeat the following steps:
 
-Notice that this is a very specific algorithm, and the tests don't check
-that you've implemented the algorithm, only that you've come up with the
-correct list of primes.
+1. Find the next unmarked number in your list (skipping over marked numbers).
+   This is a prime number.
+2. Mark all the multiples of that prime number as **not** prime.
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
+You keep repeating these steps until you've gone through every number in your list.
+At the end, all the unmarked numbers are prime.
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
+~~~~exercism/note
+The tests don't check that you've implemented the algorithm, only that you've come up with the correct list of primes.
+To check you are implementing the Sieve correctly, a good first test is to check that you do not use division or remainder operations.
+~~~~
 
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+## Example
+
+Let's say you're finding the primes less than or equal to 10.
+
+- List out 2, 3, 4, 5, 6, 7, 8, 9, 10, leaving them all unmarked.
+- 2 is unmarked and is therefore a prime.
+  Mark 4, 6, 8 and 10 as "not prime".
+- 3 is unmarked and is therefore a prime.
+  Mark 6 and 9 as not prime _(marking 6 is optional - as it's already been marked)_.
+- 4 is marked as "not prime", so we skip over it.
+- 5 is unmarked and is therefore a prime.
+  Mark 10 as not prime _(optional - as it's already been marked)_.
+- 6 is marked as "not prime", so we skip over it.
+- 7 is unmarked and is therefore a prime.
+- 8 is marked as "not prime", so we skip over it.
+- 9 is marked as "not prime", so we skip over it.
+- 10 is marked as "not prime", so we stop as there are no more numbers to check.
+
+You've examined all numbers and found 2, 3, 5, and 7 are still unmarked, which means they're the primes less than or equal to 10.
+
+Notice that this is a very specific algorithm that requires **not** to use division or derived operations (remainder, square root, exponent etc.).
 
 ## Source
 
-Sieve of Eratosthenes at Wikipedia [http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes](http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @jonboiser
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+Sieve of Eratosthenes at Wikipedia - https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes

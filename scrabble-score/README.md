@@ -1,56 +1,53 @@
 # Scrabble Score
 
-Given a word, compute the scrabble score for that word.
+Welcome to Scrabble Score on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-## Letter Values
+## Introduction
 
-You'll need these:
+[Scrabble][wikipedia] is a word game where players place letter tiles on a board to form words.
+Each letter has a value.
+A word's score is the sum of its letters' values.
 
-```text
-Letter                           Value
-A, E, I, O, U, L, N, R, S, T       1
-D, G                               2
-B, C, M, P                         3
-F, H, V, W, Y                      4
-K                                  5
-J, X                               8
-Q, Z                               10
-```
+[wikipedia]: https://en.wikipedia.org/wiki/Scrabble
 
-## Examples
+## Instructions
 
-"cabbage" should be scored as worth 14 points:
+Your task is to compute a word's Scrabble score by summing the values of its letters.
+
+The letters are valued as follows:
+
+| Letter                       | Value |
+| ---------------------------- | ----- |
+| A, E, I, O, U, L, N, R, S, T | 1     |
+| D, G                         | 2     |
+| B, C, M, P                   | 3     |
+| F, H, V, W, Y                | 4     |
+| K                            | 5     |
+| J, X                         | 8     |
+| Q, Z                         | 10    |
+
+For example, the word "cabbage" is worth 14 points:
 
 - 3 points for C
-- 1 point for A, twice
-- 3 points for B, twice
+- 1 point for A
+- 3 points for B
+- 3 points for B
+- 1 point for A
 - 2 points for G
 - 1 point for E
 
-And to total:
-
-- `3 + 2*1 + 2*3 + 2 + 1`
-- = `3 + 2 + 6 + 3`
-- = `5 + 9`
-- = 14
-
-## Extensions
-
-- You can play a double or a triple letter.
-- You can play a double or a triple word.
-
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
-
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
-
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
-
 ## Source
 
-Inspired by the Extreme Startup game [https://github.com/rchatley/extreme_startup](https://github.com/rchatley/extreme_startup)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+Inspired by the Extreme Startup game - https://github.com/rchatley/extreme_startup

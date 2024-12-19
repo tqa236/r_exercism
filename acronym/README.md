@@ -1,24 +1,38 @@
 # Acronym
 
+Welcome to Acronym on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 Convert a phrase to its acronym.
 
 Techies love their TLA (Three Letter Acronyms)!
 
-Help generate some jargon by writing a program that converts a long name
-like Portable Network Graphics to its acronym (PNG).
+Help generate some jargon by writing a program that converts a long name like Portable Network Graphics to its acronym (PNG).
 
-## Installation
-See [this guide](https://github.com/exercism/xr/blob/master/docs/INSTALLATION.md) for instructions on how to setup your local R environment.
+Punctuation is handled as follows: hyphens are word separators (like whitespace); all other punctuation can be removed from the input.
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
+For example:
 
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+| Input                     | Output |
+| ------------------------- | ------ |
+| As Soon As Possible       | ASAP   |
+| Liquid-crystal display    | LCD    |
+| Thank George It's Friday! | TGIF   |
 
 ## Source
 
-Julien Vanier [https://github.com/monkbroc](https://github.com/monkbroc)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @zacchaeusluke
+
+### Contributed to by
+
+- @jonmcalder
+- @katrinleinweber
+- @xarxziux
+
+### Based on
+
+Julien Vanier - https://github.com/monkbroc

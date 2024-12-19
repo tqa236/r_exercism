@@ -1,30 +1,52 @@
 # Largest Series Product
 
-Given a string of digits, calculate the largest product for a contiguous
-substring of digits of length n.
+Welcome to Largest Series Product on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-For example, for the input `'1027839564'`, the largest product for a
-series of 3 digits is 270 (9 * 5 * 6), and the largest product for a
-series of 5 digits is 7560 (7 * 8 * 3 * 9 * 5).
+## Introduction
 
-Note that these series are only required to occupy *adjacent positions*
-in the input; the digits need not be *numerically consecutive*.
+You work for a government agency that has intercepted a series of encrypted communication signals from a group of bank robbers.
+The signals contain a long sequence of digits.
+Your team needs to use various digital signal processing techniques to analyze the signals and identify any patterns that may indicate the planning of a heist.
 
-For the input `'73167176531330624919225119674426574742355349194934'`,
-the largest product for a series of 6 digits is 23520.
+## Instructions
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
+Your task is to look for patterns in the long sequence of digits in the encrypted signal.
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
+The technique you're going to use here is called the largest series product.
 
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+Let's define a few terms, first.
+
+- **input**: the sequence of digits that you need to analyze
+- **series**: a sequence of adjacent digits (those that are next to each other) that is contained within the input
+- **span**: how many digits long each series is
+- **product**: what you get when you multiply numbers together
+
+Let's work through an example, with the input `"63915"`.
+
+- To form a series, take adjacent digits in the original input.
+- If you are working with a span of `3`, there will be three possible series:
+  - `"639"`
+  - `"391"`
+  - `"915"`
+- Then we need to calculate the product of each series:
+  - The product of the series `"639"` is 162 (`6 × 3 × 9 = 162`)
+  - The product of the series `"391"` is 27 (`3 × 9 × 1 = 27`)
+  - The product of the series `"915"` is 45 (`9 × 1 × 5 = 45`)
+- 162 is bigger than both 27 and 45, so the largest series product of `"63915"` is from the series `"639"`.
+  So the answer is **162**.
 
 ## Source
 
-A variation on Problem 8 at Project Euler [http://projecteuler.net/problem=8](http://projecteuler.net/problem=8)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+A variation on Problem 8 at Project Euler - https://projecteuler.net/problem=8

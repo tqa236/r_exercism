@@ -1,4 +1,4 @@
-source("~/exercism/r/word-count/word-count.R")
+source("./word-count.R")
 library(testthat)
 
 context("word count")

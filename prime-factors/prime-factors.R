@@ -1,6 +1,6 @@
-library(gmp)
+library(numbers)
 
 prime_factors <- function(number) {
   if (number < 2) c()
-  else factorize(number)
+  else primeFactors(number)
 }

@@ -1,22 +1,26 @@
 # Diamond
 
-The diamond kata takes as its input a letter, and outputs it in a diamond
-shape. Given a letter, it prints a diamond starting with 'A', with the
-supplied letter at the widest point.
+Welcome to Diamond on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
+The diamond kata takes as its input a letter, and outputs it in a diamond shape.
+Given a letter, it prints a diamond starting with 'A', with the supplied letter at the widest point.
 
 ## Requirements
 
-* The first row contains one 'A'.
-* The last row contains one 'A'.
-* All rows, except the first and last, have exactly two identical letters.
-* All rows have as many trailing spaces as leading spaces. (This might be 0).
-* The diamond is horizontally symmetric.
-* The diamond is vertically symmetric.
-* The diamond has a square shape (width equals height).
-* The letters form a diamond shape.
-* The top half has the letters in ascending order.
-* The bottom half has the letters in descending order.
-* The four corners (containing the spaces) are triangles.
+- The first row contains one 'A'.
+- The last row contains one 'A'.
+- All rows, except the first and last, have exactly two identical letters.
+- All rows have as many trailing spaces as leading spaces. (This might be 0).
+- The diamond is horizontally symmetric.
+- The diamond is vertically symmetric.
+- The diamond has a square shape (width equals height).
+- The letters form a diamond shape.
+- The top half has the letters in ascending order.
+- The bottom half has the letters in descending order.
+- The four corners (containing the spaces) are triangles.
 
 ## Examples
 
@@ -52,18 +56,17 @@ E·······E
 ····A····
 ```
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
-
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
-
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
-
 ## Source
 
-Seb Rose [http://claysnow.co.uk/recycling-tests-in-tdd/](http://claysnow.co.uk/recycling-tests-in-tdd/)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+Seb Rose - https://web.archive.org/web/20220807163751/http://claysnow.co.uk/recycling-tests-in-tdd/

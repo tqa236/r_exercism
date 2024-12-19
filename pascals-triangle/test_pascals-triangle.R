@@ -1,4 +1,4 @@
-source("~/exercism/r/pascals-triangle/pascals-triangle.R")
+source("./pascals-triangle.R")
 library(testthat)
 
 context("pascals triangle")

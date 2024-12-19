@@ -1,34 +1,49 @@
 # Raindrops
 
-Convert a number to a string, the contents of which depend on the number's factors.
+Welcome to Raindrops on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
 
-- If the number has 3 as a factor, output 'Pling'.
-- If the number has 5 as a factor, output 'Plang'.
-- If the number has 7 as a factor, output 'Plong'.
-- If the number does not have 3, 5, or 7 as a factor,
-  just pass the number's digits straight through.
+## Introduction
+
+Raindrops is a slightly more complex version of the FizzBuzz challenge, a classic interview question.
+
+## Instructions
+
+Your task is to convert a number into its corresponding raindrop sounds.
+
+If a given number:
+
+- is divisible by 3, add "Pling" to the result.
+- is divisible by 5, add "Plang" to the result.
+- is divisible by 7, add "Plong" to the result.
+- **is not** divisible by 3, 5, or 7, the result should be the number as a string.
 
 ## Examples
 
-- 28's factors are 1, 2, 4, **7**, 14, 28.
-  - In raindrop-speak, this would be a simple "Plong".
-- 30's factors are 1, 2, **3**, **5**, 6, 10, 15, 30.
-  - In raindrop-speak, this would be a "PlingPlang".
-- 34 has four factors: 1, 2, 17, and 34.
-  - In raindrop-speak, this would be "34".
+- 28 is divisible by 7, but not 3 or 5, so the result would be `"Plong"`.
+- 30 is divisible by 3 and 5, but not 7, so the result would be `"PlingPlang"`.
+- 34 is not divisible by 3, 5, or 7, so the result would be `"34"`.
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
+~~~~exercism/note
+A common way to test if one number is evenly divisible by another is to compare the [remainder][remainder] or [modulus][modulo] to zero.
+Most languages provide operators or functions for one (or both) of these.
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
-
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+[remainder]: https://exercism.org/docs/programming/operators/remainder
+[modulo]: https://en.wikipedia.org/wiki/Modulo_operation
+~~~~
 
 ## Source
 
-A variation on a famous interview question intended to weed out potential candidates. [http://jumpstartlab.com](http://jumpstartlab.com)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @jonboiser
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. - https://en.wikipedia.org/wiki/Fizz_buzz

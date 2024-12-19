@@ -1,7 +1,5 @@
-source("exercism/r/hamming/hamming.R")
+source("./hamming.R")
 library(testthat)
-
-context("hamming")
 
 test_that("identical strands", {
   strand1 <- "A"
@@ -86,5 +84,3 @@ test_that("disallow second strand longer", {
   strand2 <- "AGTG"
   expect_error(hamming(strand1, strand2))
 })
-
-message("All tests passed for exercise: hamming")

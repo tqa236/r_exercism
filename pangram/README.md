@@ -1,25 +1,45 @@
 # Pangram
 
-Determine if a sentence is a pangram. A pangram (Greek: παν γράμμα, pan gramma,
-"every letter") is a sentence using every letter of the alphabet at least once.
+Welcome to Pangram on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Introduction
+
+You work for a company that sells fonts through their website.
+They'd like to show a different sentence each time someone views a font on their website.
+To give a comprehensive sense of the font, the random sentences should use **all** the letters in the English alphabet.
+
+They're running a competition to get suggestions for sentences that they can use.
+You're in charge of checking the submissions to see if they are valid.
+
+~~~~exercism/note
+Pangram comes from Greek, παν γράμμα, pan gramma, which means "every letter".
+
 The best known English pangram is:
+
 > The quick brown fox jumps over the lazy dog.
+~~~~
 
-The alphabet used consists of ASCII letters `a` to `z`, inclusive, and is case
-insensitive. Input will not contain non-ASCII symbols.
+## Instructions
 
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
+Your task is to figure out if a sentence is a pangram.
 
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
+A pangram is a sentence using every letter of the alphabet at least once.
+It is case insensitive, so it doesn't matter if a letter is lower-case (e.g. `k`) or upper-case (e.g. `K`).
 
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+For this exercise, a sentence is a pangram if it contains each of the 26 letters in the English alphabet.
 
 ## Source
 
-Wikipedia [https://en.wikipedia.org/wiki/Pangram](https://en.wikipedia.org/wiki/Pangram)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @katrinleinweber
+- @zacchaeusluke
+
+### Based on
+
+Wikipedia - https://en.wikipedia.org/wiki/Pangram

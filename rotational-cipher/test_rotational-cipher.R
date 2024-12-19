@@ -1,7 +1,5 @@
-source("~/exercism/r/rotational-cipher/rotational-cipher.R")
+source("./rotational-cipher.R")
 library(testthat)
-
-context("rotational cipher")
 
 test_that("rotate a by 1", {
   text <- "a"
@@ -60,8 +58,8 @@ test_that("rotate punctuation", {
 test_that("rotate all letters", {
   text <- "The quick brown fox jumps over the lazy dog."
   key <- 13
-  expect_equal(rotate(text, key), 
-               "Gur dhvpx oebja sbk whzcf bire gur ynml qbt.")
+  expect_equal(
+    rotate(text, key),
+    "Gur dhvpx oebja sbk whzcf bire gur ynml qbt."
+  )
 })
-
-message("All tests passed for exercise: rotational-cipher")

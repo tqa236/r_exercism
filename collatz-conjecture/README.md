@@ -1,11 +1,17 @@
 # Collatz Conjecture
 
+Welcome to Collatz Conjecture on Exercism's R Track.
+If you need help running the tests or submitting your code, check out `HELP.md`.
+
+## Instructions
+
 The Collatz Conjecture or 3x+1 problem can be summarized as follows:
 
-Take any positive integer n. If n is even, divide n by 2 to get n / 2. If n is
-odd, multiply n by 3 and add 1 to get 3n + 1. Repeat the process indefinitely.
-The conjecture states that no matter which number you start with, you will
-always reach 1 eventually.
+Take any positive integer n.
+If n is even, divide n by 2 to get n / 2.
+If n is odd, multiply n by 3 and add 1 to get 3n + 1.
+Repeat the process indefinitely.
+The conjecture states that no matter which number you start with, you will always reach 1 eventually.
 
 Given a number n, return the number of steps required to reach 1.
 
@@ -24,20 +30,21 @@ Starting with n = 12, the steps would be as follows:
 8. 2
 9. 1
 
-Resulting in 9 steps. So for input n = 12, the return value would be 9.
-
-## Installation
-See [this guide](https://exercism.io/tracks/r/installation) for instructions on how to setup your local R environment.
-
-## How to implement your solution
-In each problem folder, there is a file named `<exercise_name>.R` containing a function that returns a `NULL` value. Place your implementation inside the body of the function.
-
-## How to run tests
-Inside of RStudio, simply execute the `test_<exercise_name>.R` script. This can be conveniently done with [testthat's `auto_test` function](https://www.rdocumentation.org/packages/testthat/topics/auto_test). Because exercism code and tests are in the same folder, use this same path for both  `code_path` and `test_path` parameters. On the command-line, you can also run `Rscript test_<exercise_name>.R`.
+Resulting in 9 steps.
+So for input n = 12, the return value would be 9.
 
 ## Source
 
-An unsolved problem in mathematics named after mathematician Lothar Collatz [https://en.wikipedia.org/wiki/3x_%2B_1_problem](https://en.wikipedia.org/wiki/3x_%2B_1_problem)
+### Created by
 
-## Submitting Incomplete Solutions
-It's possible to submit an incomplete solution so you can see how others have completed the exercise.
+- @jonmcalder
+
+### Contributed to by
+
+- @katrinleinweber
+- @xarxziux
+- @zacchaeusluke
+
+### Based on
+
+An unsolved problem in mathematics named after mathematician Lothar Collatz - https://en.wikipedia.org/wiki/3x_%2B_1_problem

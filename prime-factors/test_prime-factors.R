@@ -1,4 +1,4 @@
-source("~/exercism/r/prime-factors/prime-factors.R")
+source("./prime-factors.R")
 suppressPackageStartupMessages({
   library(testthat)
 })
